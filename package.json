@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-data-scientist",
+  "version": "1.0.0",
+  "description": "Modern Data Scientist Portfolio",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "client": "cd frontend && npm start",
+    "server": "cd backend && node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
