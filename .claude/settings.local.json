@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:idristovonirina.netlify.app)",
+      "Bash(npm install:*)",
+      "Bash(npx react-scripts build:*)"
+    ]
+  }
+}
