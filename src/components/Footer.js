@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-name">Mananjo Lavisy Randriantsalama</div>
-            <p className="footer-tagline">Data Scientist | Fullstack IA/Data</p>
+            <p className="footer-tagline">AI & Data Scientist</p>
           </div>
 
           <div className="footer-social">

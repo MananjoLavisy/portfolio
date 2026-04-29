@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import translations from '../translations';
 import { FiDownload, FiMail, FiGithub, FiLinkedin } from 'react-icons/fi';
@@ -6,6 +6,23 @@ import { FiDownload, FiMail, FiGithub, FiLinkedin } from 'react-icons/fi';
 const Hero = () => {
   const { language } = useTheme();
   const t = translations[language].hero;
+  const [typedRole, setTypedRole] = useState('');
+
+  useEffect(() => {
+    let index = 0;
+    setTypedRole('');
+
+    const interval = window.setInterval(() => {
+      index += 1;
+      setTypedRole(t.role.slice(0, index));
+
+      if (index >= t.role.length) {
+        window.clearInterval(interval);
+      }
+    }, 75);
+
+    return () => window.clearInterval(interval);
+  }, [t.role]);
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -32,6 +49,10 @@ const Hero = () => {
         <div className="hero-text">
           <p className="hero-greeting">{t.greeting}</p>
           <h1 className="hero-name">{t.name}</h1>
+          <p className="hero-title" aria-label={t.role}>
+            <span>{typedRole}</span>
+            <span className="hero-caret" aria-hidden="true"></span>
+          </p>
 
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={handleDownloadCV}>

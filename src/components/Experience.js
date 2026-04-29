@@ -30,15 +30,19 @@ const Experience = () => {
                   </span>
                 </div>
                 <h3 className="experience-card-title">{item.title}</h3>
-                <a
-                  href={item.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="experience-card-company"
-                >
-                  {item.company}
-                  <FiExternalLink />
-                </a>
+                {item.companyUrl ? (
+                  <a
+                    href={item.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="experience-card-company"
+                  >
+                    {item.company}
+                    <FiExternalLink />
+                  </a>
+                ) : (
+                  <span className="experience-card-company experience-card-company-missing">{item.company}</span>
+                )}
                 <p className="experience-card-description">{item.description}</p>
                 {item.skills && (
                   <div className="experience-card-skills">
