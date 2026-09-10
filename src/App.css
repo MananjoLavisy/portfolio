@@ -46,10 +46,10 @@
   --font-size-base: 1.125rem;
   --font-size-lg: 1.25rem;
   --font-size-xl: 1.4375rem;
-  --font-size-2xl: 1.8125rem;
-  --font-size-3xl: 2.35rem;
-  --font-size-4xl: 3rem;
-  --font-size-5xl: 4.2rem;
+  --font-size-2xl: 1.65rem;
+  --font-size-3xl: 2.05rem;
+  --font-size-4xl: 2.65rem;
+  --font-size-5xl: 3.6rem;
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -222,7 +222,7 @@ a {
 
 /* ===== Section Styles ===== */
 section {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-2xl) 0;
 }
 
 section:nth-of-type(odd) {
@@ -247,19 +247,19 @@ section:nth-of-type(even) {
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .section-title {
   font-size: var(--font-size-3xl);
   font-weight: 700;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
   color: var(--text-primary);
   letter-spacing: -0.03em;
 }
 
 .section-subtitle {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   color: var(--text-secondary);
 }
 
@@ -1505,15 +1505,15 @@ section:nth-of-type(even) {
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 .experience-card {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--space-2xl);
-  padding: var(--space-2xl);
+  gap: var(--space-xl);
+  padding: var(--space-xl);
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -1549,9 +1549,9 @@ section:nth-of-type(even) {
 }
 
 .experience-card-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   color: var(--text-primary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .experience-card-company {
@@ -1561,7 +1561,7 @@ section:nth-of-type(even) {
   font-size: 1rem;
   color: #245dff;
   text-decoration: none;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   transition: all var(--transition-fast);
   font-weight: 700;
 }
@@ -1574,7 +1574,7 @@ section:nth-of-type(even) {
   font-size: var(--font-size-base);
   color: var(--text-secondary);
   line-height: 1.7;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .experience-card-skills {

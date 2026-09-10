@@ -278,13 +278,22 @@ const translations = {
       showLess: 'Show less',
       items: [
         {
+          title: 'AI Engineer & Data Analyst',
+          company: 'Daylindo',
+          companyUrl: 'https://daylindo.com',
+          logo: '',
+          period: '2026 - Present',
+          description: 'Designed an AI agent evaluation harness to automate internal consulting workflows, including interview analysis, structured knowledge extraction, and automated generation of business documents and deliverables.',
+          skills: ['Python', 'LangChain/LangGraph', 'React JS', 'Git', 'Docker', 'CI/CD', 'n8n', 'Apache Superset', 'SQL']
+        },
+        {
           title: 'AI & Backend Developer',
           company: 'ALAXIONE',
           companyUrl: 'https://www.alaxione.fr/',
           logo: '',
-          period: '2026 - Present',
+          period: '2026',
           description: 'training & developing AI models for business optimization, and resolving backend tickets issues for a digital healthcare solutions provider.',
-          skills: ['Python', 'PHP', 'TypeScript', 'GCP / CX Agents Studio', 'Docker', 'CI/CD', 'Agentic AI', 'Voicebot Agents']
+          skills: ['Python', 'PHP', 'TypeScript', 'GCP / CX Agents Studio', 'Docker', 'CI/CD', 'Agentic AI', 'Voicebot Agents', 'AI Harness', 'LLMOps', 'Agent Testing', 'Prompt Engineering', 'Context Engineering']
         },
         {
           title: 'AI Trainer (Freelance)',
@@ -602,8 +611,8 @@ const translations = {
           organization: 'Diaspora Malagasy en Egypte',
           organizationUrl: '',
           period: '2021 - 2022',
-          description: 'A dirigér et coordonner des activités socio-culturelles (sorties, voyages, rencontres, ... ) et aide à la communication de la communauté malgache en Egypte. Responsable de la Organisation d\'initiatives et d\'evenements.',
-          skills: ['Leadership', 'Organisation d\'evenements', 'Communication']
+          description: 'A dirigé et coordonné des activités socio-culturelles (sorties, voyages, rencontres, ... ) et participé à la communication de la communauté malgache en Egypte. Responsable de l\'organisation d\'initiatives et d\'événements.',
+          skills: ['Leadership', 'Organisation d\'événements', 'Communication']
         },
       ]
     },
@@ -614,13 +623,22 @@ const translations = {
       showLess: 'Voir moins',
       items: [
         {
-          title: 'Devéloppeur IA & Backend',
+          title: 'Développeur IA',
+          company: 'Daylindo',
+          companyUrl: 'https://daylindo.com',
+          logo: '',
+          period: '2026 - Présent',
+          description: 'Conception d\'un harnais d\'agents IA orienté entretiens afin d\'automatiser les tâches internes des consultants, depuis l\'analyse des échanges et l\'extraction d\'informations structurées jusqu\'à la génération automatique de documents professionnels.',
+          skills: ['Python', 'LangChain/LangGraph', 'React JS', 'Git', 'Docker', 'CI/CD', 'n8n', 'Apache Superset', 'SQL']
+        },
+        {
+          title: 'Développeur IA & Backend',
           company: 'ALAXIONE',
           companyUrl: 'https://www.alaxione.fr/',
           logo: '',
-          period: '2026 - Présent',
+          period: '2026',
           description: 'Entrainement et devéloppement de modèles IA pour l\'optimisation business, ainsi que résolution de tickets backend pour un fournisseur de solutions de santé numérique en France.',
-          skills: ['Python', 'PHP', 'TypeScript', 'GCP / CX Agents Studio', 'Docker', 'CI/CD', 'Agentic AI', 'Voicebot Agents']
+          skills: ['Python', 'PHP', 'TypeScript', 'GCP / CX Agents Studio', 'Docker', 'CI/CD', 'Agentic AI', 'Voicebot Agents', 'Harnais IA', 'LLMOps', 'Recettage agents', 'Prompt Engineering', 'Context Engineering']
         },
         {
           title: 'AI Trainer (Freelance)',
