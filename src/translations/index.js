@@ -13,7 +13,8 @@ const translations = {
     hero: {
       greeting: 'Hello, I am',
       name: 'Mananjo Lavisy RANDRIANTSALAMA',
-      role: 'AI & Data Scientist',
+      mainRole: 'AI & Data Scientist',
+      roles: ['AI Engineer', 'MLOps Engineer', 'Python Developer', 'BI-oriented Data Scientist'],
       downloadCV: 'Download CV',
       contact: 'Get In Touch'
     },
@@ -25,6 +26,7 @@ const translations = {
         'End-to-end AI solutions and automation within your ERP / BI tools or Web Apps (ex: chatbots, voicebots, recommendation engine, etc...)',
         'Predictive modeling and ML models for ai/data-driven decision making (customer churn, demand forecasting, sentiment analysis, etc...)',
         'Advanced BI/Big Data Analytics (Automated ETL pipelines & Interactive Business Dashboards)',
+        'LLM-powered agent workflows, AI harnesses, QA/acceptance testing, and continuous improvement for internal business automation',
       ]
     },
     skills: {
@@ -36,40 +38,28 @@ const translations = {
       showLess: 'Show less',
       categories: [
         {
-          emoji: '\uD83D\uDCCA',
-          name: 'BI & Analytics',
-          concepts: ['Dashboarding', 'KPI Tracking', 'Business Reporting', 'Storytelling', 'Data Modeling', 'Data Cleaning'],
-          tools: ['Power BI', 'Power Query', 'Excel', 'Spreadsheet','DBeaver','MySQL']
+          emoji: '\uD83E\uDDE0',
+          name: 'AI Engineering',
+          concepts: ['Agentic AI', 'Prompt Engineering', 'Context Engineering', 'RAG', 'LLMOps', 'AI Evaluation', 'Workflow Automation'],
+          tools: ['Python', 'LangChain/LangGraph', 'OpenAI API', 'Hugging Face', 'FastAPI', 'n8n', 'Streamlit']
         },
         {
           emoji: '\uD83D\uDD2C',
-          name: 'Data Science',
-          concepts: ['EDA', 'Statistics', 'Time Series Analysis', 'Forecasting', 'Data Mining', 'PCA (Dimensionality Reduction)', 'NLP'],
-          tools: ['Pandas', 'NumPy','Matplotlib', 'Seaborn', 'SciPy', 'Streamlit', 'spaCy', 'Jupyter']
-        },
-        {
-          emoji: '\uD83E\uDDE0',
-          name: 'AI Engineering',
-          concepts: ['Prompt Engineering', 'Agentic AI', 'AI Automation', 'Fine-tuning', 'Model Evaluation', 'RAG'],
-          tools: ['OpenAI API', 'LangChain', 'Hugging Face', 'Python', 'FastAPI', 'Streamlit', 'n8n']
-        },
-        {
-          emoji: '\u2699\uFE0F',
-          name: 'Machine Learning',
-          concepts: ['Supervised/Unsupervised Learning','Anomaly detection','Features Engineering', 'Model Tuning', 'Transfer Learning', 'MLOps Pipelines'],
-          tools: ['Scikit-learn', 'K-means', 'SVM' ,'XGBoost', 'TensorFlow/Keras', 'PyTorch', 'MLflow']
+          name: 'Data Science & Machine Learning',
+          concepts: ['EDA', 'Statistics', 'Supervised/Unsupervised Learning', 'Deep Learning', 'Time Series Analysis', 'Forecasting', 'NLP', 'Feature Engineering', 'Model Tuning'],
+          tools: ['Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'TensorFlow/Keras', 'PyTorch', 'Matplotlib', 'Seaborn', 'Jupyter']
         },
         {
           emoji: '\u2601\uFE0F',
-          name: 'Cloud & DataOps',
-          concepts: ['Deployment', 'CI/CD', 'Model Monitoring', 'Workflow Automation', 'Containerization', 'Scalable APIs', 'ELT/ETL Pipeline', 'Data Warehousing'],
-          tools: ['GCP/AWS', 'Docker', 'Git/Gitlab CI', 'GitHub Actions', 'FastAPI','Linux', 'PostgreSQL', 'Talend OS']
+          name: 'Cloud & Data / MLOps',
+          concepts: ['Data Pipelines', 'ETL/ELT', 'DataOps', 'MLOps Pipelines', 'CI/CD', 'Model Monitoring', 'BI', 'Data Analysis', 'Dashboarding', 'Data Warehousing'],
+          tools: ['Docker', 'Git/GitLab CI', 'GitHub Actions', 'GCP/AWS', 'PostgreSQL', 'MySQL', 'Power BI', 'Apache Superset', 'DBeaver', 'Linux']
         },
         {
-          emoji: '\uD83D\uDCF1',
-          name: 'Backend & Mobile Development',
-          concepts: ['REST APIs', 'Authentication', 'Responsive UI', 'State Management', 'CRUD Systems', 'Database Integration', 'API Integrations'],
-          tools: ['MERN Stack (MongoDB, Express, React, Node.js)', 'React Native', 'JavaScript', 'TypeScript', 'Bruno']
+          emoji: '\uD83E\uDDE9',
+          name: 'Cross-Functional Skills',
+          concepts: ['Backend', 'APIs & System Design', 'Geospatial AI & IoT', 'Soft Skills (Critical Thinking, Continuous Learning, Technical Translation)', 'Domain Knowledge (Agriculture, E-commerce)', 'AI Governance & Ethics', 'AI Training'],
+          tools: ['MERN Stack', 'QGIS', 'Google Earth Engine', 'React Native', 'REST APIs']
         }
       ],
     },
@@ -126,18 +116,12 @@ const translations = {
           // demo: ''
         },
         {
-          title: 'Car Rental App',
-          category: 'Mobile Development',
-          tagline: 'Mobile App for Car Rental Services with User-friendly Interface and Real-time Bookings.',
-          description: 'A mobile application designed for car rental services, providing users with a seamless experience for browsing available cars, making reservations, and managing bookings. The app features a user-friendly interface, real-time availability updates, and secure payment integration. It allows users to easily search for cars based on their preferences, view detailed information about each vehicle, and complete the booking process with just a few taps.',
-          //metrics: [
-          //  { value: '-67%', label: 'fraudulent transactions' },
-          //  { value: 'Real-time', label: 'risk scoring' }
-          //],
-          technologies: ['React Native', 'TypeScript', 'Supabase'],
-          images: ['/projects/template-no-image.svg', '/projects/template-no-image.svg'],
-          github: 'https://github.com/MananjoLavisy/CarRentalApp_v2',
-          //demo: ''
+          title: 'Pneumonia Detection from Chest X-Rays',
+          category: 'Deep Learning | Computer Vision | Healthcare',
+          tagline: 'Coming soon - Detection and localization of pneumonia-related lung opacities on chest X-rays using YOLOv8.',
+          description: 'A computer vision system for detecting and localizing pneumonia-related lung opacities on chest X-ray images, built on YOLOv8 fine-tuned on an annotated radiography dataset (RSNA Pneumonia Detection Challenge). The model outputs bounding boxes around suspicious opacity regions with confidence scores, helping prioritize cases for clinical review.',
+          technologies: ['Python', 'YOLOv8', 'PyTorch', 'OpenCV', 'FastAPI', 'Streamlit'],
+          images: ['/projects/template-no-image.svg', '/projects/template-no-image.svg']
         },
           // {
           //  title: 'Fake News Detection System',
@@ -149,17 +133,24 @@ const translations = {
           //  github: 'https://github.com/MananjoLavisy/',
           // },
          {
-          title: 'Personal Portfolio Website',
-          category: 'Web Development',
-          tagline: 'A personal portfolio website to showcase my projects, skills, and experience.',
-          description: 'A personal portfolio website built with React JS and Tailwind CSS. The website features a clean and modern design, with sections for about me, skills, projects, education, experience, and contact information. It is fully responsive and optimized for both desktop and mobile devices.',
+          title: 'Crop Yields - Smart Agriculture',
+          category: 'Smart Agriculture | Machine Learning | IoT',
+          tagline: 'Master\'s Thesis Project 2026 - INSI, accredited by Collège de Paris',
+          description: 'An intelligent platform for predicting agricultural yields by combining weather data, satellite imagery (NDVI), IoT soil sensors and machine learning / deep learning models (XGBoost, LSTM). The system centralizes soil moisture, temperature, rainfall and historical harvest data to estimate yields, recommend irrigation and fertilization, and issue drought alerts through a decision-support web and mobile dashboard, built on a full DataOps/MLOps pipeline.',
+          technologies: ['Python', 'XGBoost', 'LSTM', 'IoT', 'Satellite Data (NDVI)', 'FastAPI', 'MLflow', 'Docker', 'Kubernetes'],
+          images: ['/projects/template-no-image.svg', '/projects/template-no-image.svg']
+         },
+         {
+          title: 'AI Harness for Consultant Workflows',
+          category: 'AI Engineering | LLMOps | Automation',
+          tagline: 'An AI harness designed to structure interviews, orchestrate agents, and automate professional document generation.',
+          description: 'End-to-end AI harness for internal consultant workflows, combining agent orchestration, prompt and context engineering, structured information extraction, automated document generation, QA discipline, acceptance testing, and continuous improvement loops for reliable AI-assisted operations.',
           //metrics: [
           //  { value: '-67%', label: 'fraudulent transactions' },
           //  { value: 'Real-time', label: 'risk scoring' }
           //],
-          technologies: ['React JS', 'Tailwind CSS'],
+          technologies: ['Python', 'LangChain/LangGraph', 'React JS', 'n8n', 'Docker', 'CI/CD', 'LLMOps', 'Prompt Engineering', 'Context Engineering'],
           images: ['/projects/template-no-image.svg', '/projects/template-no-image.svg'],
-          github: 'https://github.com/MananjoLavisy/Portfolio',
           //demo: ''
          }
       ]
@@ -278,12 +269,12 @@ const translations = {
       showLess: 'Show less',
       items: [
         {
-          title: 'AI Engineer & Data Analyst',
+          title: 'AI Engineer',
           company: 'Daylindo',
           companyUrl: 'https://daylindo.com',
           logo: '',
           period: '2026 - Present',
-          description: 'Designed an AI agent evaluation harness to automate internal consulting workflows, including interview analysis, structured knowledge extraction, and automated generation of business documents and deliverables.',
+          description: 'End-to-end delivery of an AI harness for consultant interview workflows, covering agent orchestration, structured knowledge extraction, automated document generation, QA discipline, acceptance testing, and continuous improvement of AI-assisted internal processes. Also handling SQL query optimization and Apache Superset dashboarding for internal reporting.',
           skills: ['Python', 'LangChain/LangGraph', 'React JS', 'Git', 'Docker', 'CI/CD', 'n8n', 'Apache Superset', 'SQL']
         },
         {
@@ -374,7 +365,8 @@ const translations = {
     hero: {
       greeting: 'Bonjour, je suis',
       name: 'Mananjo Lavisy RANDRIANTSALAMA',
-      role: 'Ingénieur en IA & Data Scientist',
+      mainRole: 'AI & Data Scientist',
+      roles: ['Ingénieur en Intelligence Artificielle', 'Ingénieur MLOps', 'Développeur Python', 'Data Scientist orienté BI'],
       downloadCV: 'Télécharger CV',
       contact: 'Me Contacter'
     },
@@ -385,7 +377,8 @@ const translations = {
       services: [
         'Solutions IA de bout en bout et automatisation dans vos outils ERP / BI ou applications web (ex : chatbots, voicebots, moteur de recommandation, etc.)',
         'Modèles predictifs et ML pour une prise de décision basée sur l\'IA et les données (churn client, prévision de la demande, analyse de sentiments, etc.)',
-        'BI / Big Data Analytics avancée (pipelines ETL automatisées et tableaux de bord business interactifs)'
+        'BI / Big Data Analytics avancée (pipelines ETL automatisées et tableaux de bord business interactifs)',
+        'Workflows d\'agents IA, harnais IA, QA/recettage et amélioration continue pour automatiser les processus internes'
       ]
     },
     skills: {
@@ -397,40 +390,28 @@ const translations = {
       showLess: 'Voir moins',
       categories: [
         {
-          emoji: '\uD83D\uDCCA',
-          name: 'BI & Analytics',
-          concepts: ['Dashboarding', 'Suivi KPI', 'Reporting metier', 'Storytelling', 'Modelisation des données', 'Nettoyage des données'],
-          tools: ['Power BI', 'Power Query', 'Excel', 'Spreadsheet', 'DBeaver', 'MySQL']
+          emoji: '\uD83E\uDDE0',
+          name: 'AI Engineering',
+          concepts: ['Agentic AI', 'Prompt Engineering', 'Context Engineering', 'RAG', 'LLMOps', 'Évaluation IA', 'Automatisation des workflows'],
+          tools: ['Python', 'LangChain/LangGraph', 'OpenAI API', 'Hugging Face', 'FastAPI', 'n8n', 'Streamlit']
         },
         {
           emoji: '\uD83D\uDD2C',
-          name: 'Data Science',
-          concepts: ['EDA', 'Statistiques', 'Analyse de séries temporelles', 'Forecasting', 'Data Mining', 'PCA (réduction de dimension)', 'NLP'],
-          tools: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'SciPy', 'Streamlit', 'spaCy', 'Jupyter']
-        },
-        {
-          emoji: '\uD83E\uDDE0',
-          name: 'AI Engineering',
-          concepts: ['Prompt Engineering', 'Agents IA Autonomes', 'Automatisation IA', 'Fine-tuning', 'Evaluation de modèles', 'RAG'],
-          tools: ['OpenAI API', 'LangChain', 'Hugging Face', 'Python', 'FastAPI', 'Streamlit', 'n8n']
-        },
-        {
-          emoji: '\u2699\uFE0F',
-          name: 'Machine Learning',
-          concepts: ['Apprentissage supervisée/non supervisée', 'Détection d\'anomalies', 'Feature Engineering', 'Model Tuning', 'Transfer Learning', 'Pipelines MLOps'],
-          tools: ['Scikit-learn', 'K-means', 'SVM', 'XGBoost', 'TensorFlow/Keras', 'PyTorch', 'MLflow']
+          name: 'Data Science & Machine Learning',
+          concepts: ['EDA', 'Statistiques', 'Apprentissage supervisé/non supervisé', 'Deep Learning', 'Analyse de séries temporelles', 'Forecasting', 'NLP', 'Feature Engineering', 'Model Tuning'],
+          tools: ['Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'TensorFlow/Keras', 'PyTorch', 'Matplotlib', 'Seaborn', 'Jupyter']
         },
         {
           emoji: '\u2601\uFE0F',
-          name: 'Cloud & DataOps',
-          concepts: ['Déploiement', 'CI/CD', 'Monitoring de modèles', 'Automatisation des workflows', 'Conteneurisation', 'APIs scalables', 'Pipeline ELT/ETL', 'Data Warehousing'],
-          tools: ['GCP/AWS', 'Docker', 'Git/Gitlab CI', 'GitHub Actions', 'FastAPI', 'Linux', 'PostgreSQL', 'Talend OS']
+          name: 'Cloud & Data / MLOps',
+          concepts: ['Data Pipelines', 'ETL/ELT', 'DataOps', 'Pipelines MLOps', 'CI/CD', 'Monitoring de modèles', 'BI', 'Analyse de données', 'Dashboarding', 'Data Warehousing'],
+          tools: ['Docker', 'Git/GitLab CI', 'GitHub Actions', 'GCP/AWS', 'PostgreSQL', 'MySQL', 'Power BI', 'Apache Superset', 'DBeaver', 'Linux']
         },
         {
-          emoji: '\uD83D\uDCF1',
-          name: 'Backend & Mobile Developpement',
-          concepts: ['APIs REST', 'Authentification', 'UI responsive', 'Gestion d\'état', 'Systèmes CRUD', 'Intégration base de données', 'Intégrations API'],
-          tools: ['MERN Stack (MongoDB, Express, React, Node.js)', 'React Native', 'JavaScript', 'TypeScript', 'Bruno']
+          emoji: '\uD83E\uDDE9',
+          name: 'Compétences transversales',
+          concepts: ['Backend', 'APIs & System Design', 'IA Géospatiale & IoT', 'Soft Skills (Esprit critique, Apprentissage continu, Traduction technique)', 'Connaissance métier (Agriculture, E-commerce)', 'AI Governance & Ethics', 'Formation à l\'IA'],
+          tools: ['MERN Stack', 'QGIS', 'Google Earth Engine', 'React Native', 'REST APIs']
         }
       ],
     },
@@ -484,30 +465,33 @@ const translations = {
           github: 'https://github.com/MananjoLavisy/LAVISY_bot'
         },
         {
-          title: 'Car Rental App',
-          category: 'Developpement Mobile',
-          tagline: 'Application mobile de location de voitures avec interface intuitive et réservations en temps réel.',
-          description: 'Application mobile conçue pour les services de location de voitures, offrant une expérience fluide pour consulter les véhicules disponibles, effectuer des resérvations et gérer les bookings. L\'application inclut une interface intuitive, des mises à jour de disponibilité en temps réel et une intégration de paiement securisé par carte bancaire. Les utilisateurs peuvent rechercher facilement des voitures selon leurs préférences, consulter les détails des véhicules et finaliser une résérvation en quelques taps.',
-          //metrics: [
-          //  { value: '-67%', label: 'fraudulent transactions' },
-          //  { value: 'Real-time', label: 'risk scoring' }
-          //],
-          technologies: ['React Native', 'TypeScript', 'Supabase'],
-          images: ['/projects/template-no-image.svg', '/projects/template-no-image.svg'],
-          github: 'https://github.com/MananjoLavisy/CarRentalApp_v2'
+          title: 'Détection de pneumonie sur radiographies pulmonaires',
+          category: 'Deep Learning | Computer Vision | Santé',
+          tagline: 'Bientôt disponible - Détection et localisation des opacités pulmonaires liées à la pneumonie sur radiographies via YOLOv8.',
+          description: 'Système de vision par ordinateur pour détecter et localiser les opacités pulmonaires liées à la pneumonie sur des radiographies thoraciques, basé sur YOLOv8 affiné sur un jeu de données radiographiques annoté (RSNA Pneumonia Detection Challenge). Le modèle produit des boîtes englobantes autour des zones d\'opacité suspectes avec un score de confiance, aidant à prioriser les cas pour une relecture clinique.',
+          technologies: ['Python', 'YOLOv8', 'PyTorch', 'OpenCV', 'FastAPI', 'Streamlit'],
+          images: ['/projects/template-no-image.svg', '/projects/template-no-image.svg']
         },
         {
-          title: 'Personal Portfolio Website',
-          category: 'Developpement Web',
-          tagline: 'Un site portfolio personnel pour presenter mes projets, compétences et expériences.',
-          description: 'Un site portfolio personnel developpe avec React JS et Tailwind CSS. Le site propose un design moderne et pure, avec des sections a propos, compétences, projets, formation, expérience et contact. Il est entierement responsive et optimise pour desktop et mobile.',
+          title: 'Crop Yields - Agriculture Intelligente',
+          category: 'Agriculture Intelligente | Machine Learning | IoT',
+          tagline: 'Projet de mémoire Master 2026 - INSI, accrédité par Collège de Paris',
+          description: 'Plateforme intelligente de prédiction des rendements agricoles combinant données météorologiques, imagerie satellitaire (NDVI), capteurs IoT du sol et modèles de machine learning / deep learning (XGBoost, LSTM). Le système centralise humidité du sol, température, pluviométrie et historique des récoltes pour estimer les rendements, recommander irrigation et fertilisation, et émettre des alertes sécheresse via un tableau de bord web et mobile d\'aide à la décision, appuyé sur un pipeline complet DataOps/MLOps.',
+          technologies: ['Python', 'XGBoost', 'LSTM', 'IoT', 'Données satellitaires (NDVI)', 'FastAPI', 'MLflow', 'Docker', 'Kubernetes'],
+          images: ['/projects/template-no-image.svg', '/projects/template-no-image.svg']
+        },
+        {
+          title: 'Harnais IA pour workflows consultants',
+          category: 'AI Engineering | LLMOps | Automatisation',
+          tagline: 'Un harnais IA conçu pour structurer les entretiens, orchestrer des agents et automatiser la génération de documents professionnels.',
+          description: 'Harnais IA end-to-end pour les workflows internes des consultants, combinant orchestration d\'agents, prompt engineering, context engineering, extraction d\'informations structurées, génération automatique de documents, discipline QA, recettage et boucles d\'amélioration continue pour fiabiliser les opérations assistées par IA.',
           //metrics: [
           //  { value: '-67%', label: 'fraudulent transactions' },
           //  { value: 'Real-time', label: 'risk scoring' }
           //],
-          technologies: ['React JS', 'Tailwind CSS'],
+          technologies: ['Python', 'LangChain/LangGraph', 'React JS', 'n8n', 'Docker', 'CI/CD', 'LLMOps', 'Prompt Engineering', 'Context Engineering'],
           images: ['/projects/template-no-image.svg', '/projects/template-no-image.svg'],
-          github: 'https://github.com/MananjoLavisy/Portfolio'
+          //demo: ''
         }
       ]
     },
@@ -623,12 +607,12 @@ const translations = {
       showLess: 'Voir moins',
       items: [
         {
-          title: 'Développeur IA',
+          title: 'AI Engineer',
           company: 'Daylindo',
           companyUrl: 'https://daylindo.com',
           logo: '',
           period: '2026 - Présent',
-          description: 'Conception d\'un harnais d\'agents IA orienté entretiens afin d\'automatiser les tâches internes des consultants, depuis l\'analyse des échanges et l\'extraction d\'informations structurées jusqu\'à la génération automatique de documents professionnels.',
+          description: 'Delivery end-to-end d\'un harnais IA pour les workflows d\'entretiens consultants, couvrant l\'orchestration d\'agents, l\'extraction d\'informations structurées, la génération automatique de documents, la discipline QA, le recettage et l\'amélioration continue des processus internes assistés par IA. Prise en charge également de l\'optimisation de requêtes SQL et des tableaux de bord Apache Superset pour le reporting interne.',
           skills: ['Python', 'LangChain/LangGraph', 'React JS', 'Git', 'Docker', 'CI/CD', 'n8n', 'Apache Superset', 'SQL']
         },
         {

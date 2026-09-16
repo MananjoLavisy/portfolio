@@ -9,20 +9,48 @@ const Hero = () => {
   const [typedRole, setTypedRole] = useState('');
 
   useEffect(() => {
-    let index = 0;
+    const roles = t.roles;
+    let roleIndex = 0;
+    let letterIndex = 0;
+    let isDeleting = false;
+    let timeoutId;
+
     setTypedRole('');
 
-    const interval = window.setInterval(() => {
-      index += 1;
-      setTypedRole(t.role.slice(0, index));
+    const typeNext = () => {
+      const currentRole = roles[roleIndex];
 
-      if (index >= t.role.length) {
-        window.clearInterval(interval);
+      if (isDeleting) {
+        letterIndex -= 1;
+        setTypedRole(currentRole.slice(0, letterIndex));
+
+        if (letterIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          timeoutId = window.setTimeout(typeNext, 250);
+          return;
+        }
+
+        timeoutId = window.setTimeout(typeNext, 45);
+        return;
       }
-    }, 75);
 
-    return () => window.clearInterval(interval);
-  }, [t.role]);
+      letterIndex += 1;
+      setTypedRole(currentRole.slice(0, letterIndex));
+
+      if (letterIndex === currentRole.length) {
+        isDeleting = true;
+        timeoutId = window.setTimeout(typeNext, 3000);
+        return;
+      }
+
+      timeoutId = window.setTimeout(typeNext, 75);
+    };
+
+    timeoutId = window.setTimeout(typeNext, 75);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [t.roles]);
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -33,9 +61,17 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = process.env.PUBLIC_URL + '/assets/cv.pdf';
-    link.download = 'CV_Mananjo_Lavisy_Randriantsalama.pdf';
+    const fileName = language === 'fr' ? 'cv-fr.pdf' : 'cv-en.pdf';
+    link.href = process.env.PUBLIC_URL + '/assets/' + fileName;
+    link.download = `CV_Mananjo_Lavisy_Randriantsalama_${language.toUpperCase()}.pdf`;
     link.click();
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'download_cv', {
+        cv_language: language,
+        file_name: fileName,
+      });
+    }
   };
 
   return (
@@ -49,7 +85,8 @@ const Hero = () => {
         <div className="hero-text">
           <p className="hero-greeting">{t.greeting}</p>
           <h1 className="hero-name">{t.name}</h1>
-          <p className="hero-title" aria-label={t.role}>
+          <p className="hero-main-role">{t.mainRole}</p>
+          <p className="hero-title" aria-label={t.roles.join(', ')}>
             <span>{typedRole}</span>
             <span className="hero-caret" aria-hidden="true"></span>
           </p>
